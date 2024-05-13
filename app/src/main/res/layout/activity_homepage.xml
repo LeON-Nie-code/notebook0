@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#F0F0F0">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/centerline"
+        android:layout_marginTop="250dp"
+        >
+
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white"
+        android:id="@+id/toolbar_homepage"
+        >
+
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <!-- 头像 -->
+    <ImageView
+        android:id="@+id/profile_image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/toolbar_homepage"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/ic_launcher_foreground"
+        android:scaleType="centerCrop"
+        android:background="#00ff00" />
+
+    <!-- 姓名 -->
+    <TextView
+        android:id="@+id/profile_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/profile_image"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="Name Here"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#333333" />
+
+    <!-- 联系方式 -->
+    <LinearLayout
+        android:id="@+id/contact_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/centerline"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical">
+
+        <!-- 邮箱 -->
+        <TextView
+            android:id="@+id/profile_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email: example@example.com"
+            android:textSize="20sp"
+            android:textColor="#666666"
+            android:layout_margin="20dp"/>
+
+        <!-- 电话 -->
+        <TextView
+            android:id="@+id/profile_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Phone: +123456789"
+            android:textSize="20sp"
+            android:textColor="#666666"
+            android:layout_margin="20dp"/>
+    </LinearLayout>
+
+    <!-- 个人简介 -->
+    <TextView
+        android:id="@+id/profile_bio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/contact_info"
+        android:layout_marginTop="16dp"
+        android:text="Brief Bio: This is a sample personal bio."
+        android:textSize="20sp"
+        android:textColor="#666666" />
+
+    <!-- 社交媒体链接 -->
+    <LinearLayout
+        android:id="@+id/social_links"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/profile_bio"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="200dp"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+
+        <!-- 社交媒体图标 -->
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/github"
+            android:layout_marginEnd="8dp" />
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/twitter"
+            android:layout_marginEnd="8dp" />
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/qq"
+            />
+    </LinearLayout>
+
+</RelativeLayout>
